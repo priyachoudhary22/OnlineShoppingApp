@@ -1,0 +1,238 @@
+/* Applies box-sizing to all elements. */
+* {
+    box-sizing: border-box;
+}
+
+/* Styles the complete webpage. */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Styles the body of the application. */
+body {
+    margin-bottom: 70px;
+    background: linear-gradient(135deg, #fff5f8, #ffffff);
+    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Makes the main page container attractive. */
+.container {
+    max-width: 1200px;
+}
+
+/* Styles the navigation bar. */
+.navbar {
+    background: linear-gradient(90deg, #ffd6e5, #ffeaf2) !important;
+    border-bottom: 2px solid #f5b6cb !important;
+    box-shadow: 0 4px 15px rgba(220, 100, 140, 0.12);
+}
+
+/* Styles the application name in navbar. */
+.navbar-brand {
+    color: #b83b68 !important;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/* Styles navigation links. */
+.nav-link {
+    color: #8f3157 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Adds hover animation to navigation links. */
+.nav-link:hover {
+    color: #d94f7d !important;
+    transform: translateY(-2px);
+}
+
+/* Styles the main heading. */
+h1 {
+    color: #b83b68;
+    font-weight: 700;
+}
+
+/* Styles secondary headings. */
+h2,
+h3,
+h4 {
+    color: #a83d64;
+}
+
+/* Styles the main page heading area. */
+.text-center h1 {
+    font-size: 42px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Styles the page description. */
+.text-center p {
+    color: #777;
+    font-size: 17px;
+}
+
+/* Styles all buttons in the application. */
+.btn {
+    background: linear-gradient(135deg, #f8a9c4, #f6bfd3) !important;
+    border: none !important;
+    color: #7d2348 !important;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(220, 100, 140, 0.18);
+    transition: all 0.3s ease;
+}
+
+/* Adds an attractive hover effect to all buttons. */
+.btn:hover {
+    background: linear-gradient(135deg, #f48fb1, #f7aac4) !important;
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(220, 80, 130, 0.28);
+}
+
+/* Adds a click effect to buttons. */
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* Styles the product table. */
+.table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(200, 100, 130, 0.12);
+}
+
+/* Styles the table heading. */
+.table thead {
+    background: linear-gradient(90deg, #f7b6cc, #f9cad9);
+}
+
+/* Overrides Bootstrap's dark table heading. */
+.table-dark {
+    --bs-table-bg: #f7b6cc !important;
+    --bs-table-color: #7d2348 !important;
+}
+
+/* Styles table header cells. */
+.table th {
+    color: #7d2348 !important;
+    border-color: #f3d3df;
+    padding: 14px;
+}
+
+/* Styles table data cells. */
+.table td {
+    padding: 14px;
+    vertical-align: middle;
+    border-color: #f5e1e8;
+}
+
+/* Adds hover animation to table rows. */
+.table tbody tr {
+    transition: all 0.25s ease;
+}
+
+/* Highlights a table row when the mouse is over it. */
+.table tbody tr:hover {
+    background-color: #fff0f5;
+    transform: scale(1.005);
+}
+
+/* Styles product cards. */
+.card {
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(200, 100, 130, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Adds animation to cards when hovered. */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(200, 100, 130, 0.22);
+}
+
+/* Styles form input fields. */
+.form-control {
+    border: 1px solid #f0b6c9;
+    border-radius: 12px;
+    padding: 11px 15px;
+    transition: all 0.3s ease;
+}
+
+/* Adds pink focus effect to input fields. */
+.form-control:focus {
+    border-color: #ef91b0;
+    box-shadow: 0 0 0 0.2rem rgba(245, 150, 180, 0.2);
+}
+
+/* Styles labels. */
+label {
+    color: #8f3157;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+/* Styles success messages. */
+.alert-success {
+    background-color: #ffe5ef;
+    border-color: #f5b4ca;
+    color: #8f3157;
+    border-radius: 15px;
+}
+
+/* Styles the footer. */
+footer {
+    background: #fff0f5;
+    border-top: 1px solid #f3c4d5 !important;
+}
+
+/* Styles footer links. */
+footer a {
+    color: #b83b68;
+}
+
+/* Adds a fade-in animation. */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applies fade-in animation to the main content. */
+main {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsive design for small screens. */
+@media (max-width: 768px) {
+
+    /* Makes the heading smaller on mobile. */
+    .text-center h1 {
+        font-size: 30px;
+    }
+
+    /* Makes tables scrollable on small screens. */
+    .table {
+        font-size: 13px;
+    }
+
+    /* Reduces button size on mobile. */
+    .btn {
+        padding: 8px 14px;
+    }
+}

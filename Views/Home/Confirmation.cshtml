@@ -1,0 +1,24 @@
+@{
+    // Sets the page title.
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<!-- Displays confirmation heading. -->
+<h1>Order Confirmation</h1>
+
+<!-- Displays the order message. -->
+<div class="alert alert-success">
+    @ViewBag.Message
+</div>
+
+<!-- Displays the category stored in session. -->
+<p>
+    Selected Category:
+    <strong>@ViewBag.Category</strong>
+</p>
+
+<!-- Returns the user to the product list. -->
+<a asp-action="Index"
+   class="btn btn-primary">
+    Back to Products
+</a>

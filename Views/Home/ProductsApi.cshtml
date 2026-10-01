@@ -1,0 +1,45 @@
+@model List<OnlineShoppingApp.Controllers.ProductApi>
+
+@{
+    // Sets the page title.
+    ViewData["Title"] = "API Products";
+}
+
+<!-- Displays page heading. -->
+<h1>Products from Fake Store API</h1>
+
+<!-- Creates a table for API products. -->
+<table class="table table-bordered table-striped">
+
+    <!-- Defines table headers. -->
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <!-- Displays API products. -->
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <!-- Displays product ID. -->
+                <td>@product.Id</td>
+
+                <!-- Displays product title. -->
+                <td>@product.Title</td>
+
+                <!-- Displays product price. -->
+                <td>$@product.Price</td>
+
+                <!-- Displays product category. -->
+                <td>@product.Category</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

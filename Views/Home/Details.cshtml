@@ -1,0 +1,66 @@
+@model OnlineShoppingApp.Models.Product
+
+@{
+    // Sets the page title.
+    ViewData["Title"] = "Product Details";
+}
+
+<!-- Displays product heading. -->
+<h1>Product Details</h1>
+
+<!-- Displays product information. -->
+<div class="card p-4">
+
+    <!-- Displays product ID. -->
+    <h4>Product ID: @Model.ProductId</h4>
+
+    <!-- Displays product name. -->
+    <h4>Product Name: @Model.ProductName</h4>
+
+    <!-- Displays product category. -->
+    <h4>Category: @Model.Category</h4>
+
+    <!-- Displays original price. -->
+    <h4>Original Price: ₹@Model.Price</h4>
+
+    <!-- Displays discount percentage. -->
+    <h4>Discount: @Model.DiscountPercentage%</h4>
+
+    <!-- Displays calculated selling price. -->
+    <h4>
+        Discounted Price:
+        ₹@ViewBag.DiscountedPrice
+    </h4>
+
+</div>
+
+<hr />
+
+<!-- Displays order form heading. -->
+<h2>Place Order</h2>
+
+<!-- Sends order information to controller. -->
+<form asp-action="PlaceOrder" method="post">
+
+    <!-- Sends ProductId using a hidden field. -->
+    <input type="hidden"
+           name="ProductId"
+           value="@Model.ProductId" />
+
+    <!-- Customer name input. -->
+    <div class="mb-3">
+        <label>Customer Name</label>
+
+        <input type="text"
+               name="CustomerName"
+               class="form-control"
+               required />
+    </div>
+
+    <!-- Submits the order. -->
+    <button type="submit"
+            class="btn btn-success">
+        Place Order
+    </button>
+
+</form>
